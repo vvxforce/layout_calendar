@@ -1,3 +1,57 @@
+$widthItem: 98px;
+$heightItem: 98px;
+$borderWidth: 1px;
+$days: (
+  1: "mon",
+  2: "tue",
+  3: "wed",
+  4: "thu",
+  5: "fri",
+  6: "sat",
+  7: "sun"
+);
+
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 50px;
+}
+
+.calendar {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: ($widthItem + 1px + 2 * $borderWidth) * 7;
+  height: ($heightItem + 1px + 2 * $borderWidth) * 5;
+  flex-wrap: wrap;
+}
+
+.calendar > div {
+  margin-top: 1px;
+  margin-right: 1px;
+  width: $widthItem;
+  height: $heightItem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border: $borderWidth solid #000;
+  cursor: pointer;
+}
+
+.calendar > div:hover {
+  background: pink;
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} div:nth-child(#{$i}) ~ div {
+    display: none;
+  }
 }

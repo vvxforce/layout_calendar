@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 50px;
+}
+
+.calendar {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 707px;
+  height: 505px;
+  flex-wrap: wrap;
+}
+
+.calendar > div {
+  margin-top: 1px;
+  margin-right: 1px;
+  width: 98px;
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.calendar > div:hover {
+  background: pink;
+}
+
+.calendar div:nth-child(1)::after {
+  content: "1";
+}
+
+.calendar div:nth-child(2)::after {
+  content: "2";
+}
+
+.calendar div:nth-child(3)::after {
+  content: "3";
+}
+
+.calendar div:nth-child(4)::after {
+  content: "4";
+}
+
+.calendar div:nth-child(5)::after {
+  content: "5";
+}
+
+.calendar div:nth-child(6)::after {
+  content: "6";
+}
+
+.calendar div:nth-child(7)::after {
+  content: "7";
+}
+
+.calendar div:nth-child(8)::after {
+  content: "8";
+}
+
+.calendar div:nth-child(9)::after {
+  content: "9";
+}
+
+.calendar div:nth-child(10)::after {
+  content: "10";
+}
+
+.calendar div:nth-child(11)::after {
+  content: "11";
+}
+
+.calendar div:nth-child(12)::after {
+  content: "12";
+}
+
+.calendar div:nth-child(13)::after {
+  content: "13";
+}
+
+.calendar div:nth-child(14)::after {
+  content: "14";
+}
+
+.calendar div:nth-child(15)::after {
+  content: "15";
+}
+
+.calendar div:nth-child(16)::after {
+  content: "16";
+}
+
+.calendar div:nth-child(17)::after {
+  content: "17";
+}
+
+.calendar div:nth-child(18)::after {
+  content: "18";
+}
+
+.calendar div:nth-child(19)::after {
+  content: "19";
+}
+
+.calendar div:nth-child(20)::after {
+  content: "20";
+}
+
+.calendar div:nth-child(21)::after {
+  content: "21";
+}
+
+.calendar div:nth-child(22)::after {
+  content: "22";
+}
+
+.calendar div:nth-child(23)::after {
+  content: "23";
+}
+
+.calendar div:nth-child(24)::after {
+  content: "24";
+}
+
+.calendar div:nth-child(25)::after {
+  content: "25";
+}
+
+.calendar div:nth-child(26)::after {
+  content: "26";
+}
+
+.calendar div:nth-child(27)::after {
+  content: "27";
+}
+
+.calendar div:nth-child(28)::after {
+  content: "28";
+}
+
+.calendar div:nth-child(29)::after {
+  content: "29";
+}
+
+.calendar div:nth-child(30)::after {
+  content: "30";
+}
+
+.calendar div:nth-child(31)::after {
+  content: "31";
+}
+
+.calendar-28 div:nth-child(28) ~ div {
+  display: none;
+}
+
+.calendar-29 div:nth-child(29) ~ div {
+  display: none;
+}
+
+.calendar-30 div:nth-child(30) ~ div {
+  display: none;
+}
+
+.calendar-31 div:nth-child(31) ~ div {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
