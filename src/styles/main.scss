@@ -1,5 +1,5 @@
-$widthItem: 98px;
-$heightItem: 98px;
+$widthItem: 100px;
+$heightItem: 100px;
 $borderWidth: 1px;
 $days: (
   1: "mon",
@@ -22,12 +22,13 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  width: ($widthItem + 1px + 2 * $borderWidth) * 7;
-  height: ($heightItem + 1px + 2 * $borderWidth) * 5;
+  width: ($widthItem + 1px) * 7;
+  height: ($heightItem + 1px) * 5;
   flex-wrap: wrap;
 }
 
 .calendar > div {
+  box-sizing: border-box;
   margin-top: 1px;
   margin-right: 1px;
   width: $widthItem;
@@ -53,5 +54,11 @@ body {
 @for $i from 28 through 31 {
   .calendar-#{$i} div:nth-child(#{$i}) ~ div {
     display: none;
+  }
+}
+
+@each $i, $day in $days {
+  .calendar-#{$day} div:first-child {
+    margin-left: #{(($i) - 1) * $widthItem + 1px};
   }
 }
