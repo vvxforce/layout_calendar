@@ -59,6 +59,6 @@ body {
 
 @each $i, $day in $days {
   .calendar-#{$day} div:first-child {
-    margin-left: #{(($i) - 1) * $widthItem + 1px};
+    margin-left: #{(($i) - 1) * ($widthItem + 1px)};
   }
 }
